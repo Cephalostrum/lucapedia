@@ -1,0 +1,39 @@
+body
+{
+	padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+}
+
+.center
+{
+	float: none;
+	margin: 0 auto;
+	text-align: center;
+}
+	
+div.btn-group
+{
+	margin: 0 auto; 
+	text-align: center;
+	width: inherit;
+	display: inline-block;
+}
+
+#query
+{
+	width: 273px;
+}
+
+.btn-group-wrap
+{
+	text-align: center;
+}
+	
+.pager
+{
+	padding-top: 10px;
+}
+	
+a
+{
+	cursor: pointer;
+}

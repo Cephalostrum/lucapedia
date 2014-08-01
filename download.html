@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>LUCApedia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; 
+      }
+    </style>
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="bootstrap/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="bootstrap/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="bootstrap/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="bootstrap/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="bootstrap/ico/apple-touch-icon-57-precomposed.png">
+    
+    <script src="./bootstrap/js/jquery.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			<a class="brand" href="index.html">LUCApedia</a>
+			<div class="nav-collapse">
+				<ul class="nav">
+					<li><a href="index.html">Search</a></li>
+					<li><a href="browse.html">Browse</a></li>
+					<li><a href="about.html">About</a></li>
+					<li class="active"><a href="download.html">Download</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">      
+	<h3>MySQL datafiles</h3>
+	<ul>
+		<li> <a href="data/LUCApedia_table.sql">LUCApedia_table.sql</a> (1.43 GB)  </li>
+		<li> <a href="data/name_Uniprot_lookup_table.sql">name_Uniprot_lookup_table.sql</a> (85.3 MB) </li>
+	</ul>
+	<p>These files can be imported into an existing MySQL database. For example, to import <strong>LUCApedia_table.sql</strong> into <strong>databasename</strong> database, use </p>
+<pre>
+mysql -u username -p databasename < LUCApedia_table.sql
+</pre>
+	<h3> Database text files </h3>
+	<p> Each of these files represents a single dataset relevant to early life (see documentation for details). The original data are mapped onto Uniprot, KEGG, and Biocyc IDs. The format of each file is...
+	<br>
+<pre>
+> dataset entry 
+Uniprot ID 1	KEGG ID 1	Biocyc ID 1 
+Uniprot ID 2	KEGG ID 2	Biocyc ID 2 
+... and so on. </pre></p>
+		
+	<ul>
+		<li> <a href="downloads/amino_acid_cofactor"> amino_acid_cofactor </a> (80 KB) </li>
+		<li> <a href="downloads/Delaye_et_al"> Delaye_et_al </a> (40.4 MB) </li>
+		<li> <a href="downloads/Harris_et_al"> Harris_et_al </a> (250 KB) </li>
+		<li> <a href="downloads/iron_sulfur_cofactor"> iron_sulfur_cofactor </a> (514 KB) </li>
+		<li> <a href="downloads/Mirkin_et_al"> Mirkin_et_al </a> (1.2 MB) </li>
+		<li> <a href="downloads/nucleotide_cofactor"> nucleotide_cofactor </a> (443 KB) </li>
+		<li> <a href="downloads/ribozyme_functions"> ribozyme_functions </a> (2.3 KB) </li>
+		<li> <a href="downloads/Srinivasan_et_al"> Srinivasan_et_al </a> (16.3 KB) </li>
+		<li> <a href="downloads/Wang_et_al"> Wang_et_al </a> (1.0 MB) </li>
+		<li> <a href="downloads/Yang_et_al"> Yang_et_al </a> (288 KB) </li>
+		<li> <a href="downloads/zinc_cofactor"> zinc_cofactor </a> (746 KB) </li>
+	</ul>
+		
+	<h3>Database documentation</h3>
+	<ul>
+		<li> <a href="downloads/lucapedia_documentation.pdf">lucapedia_documentation.pdf</a> </li>
+		<li> <a href="downloads/lucapedia_search_tutorial.pdf">lucapedia_search_tutorial.pdf</a> </li>
+	</ul>
+	
+	<div class="alert alert-info">
+		<button type="button" class="close" data-dismiss="alert">&times;</button>
+		If you use LUCApedia, please cite... <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3531223/">Goldman AD, Bernhard TM, Dolzhenko E, Landweber LF (2013) LUCApedia: a database for the study of ancient life. Nucleic Acids Res., 41:D1079-82.</a>
+	</div>
+</div>
+
+</body></html>

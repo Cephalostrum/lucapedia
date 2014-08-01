@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>LUCApedia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">    
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="bootstrap/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="bootstrap/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="bootstrap/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="bootstrap/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="bootstrap/ico/apple-touch-icon-57-precomposed.png">
+  	
+    <script src="./bootstrap/js/jquery.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/index.js" type="text/javascript"></script>
+    <script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-36015370-1']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' :'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			<a class="brand" href="index.html">LUCApedia</a>
+			<div class="nav-collapse">
+				<ul class="nav">
+					<li class="active"><a href="index.html">Search</a></li>
+					<li><a href="browse.html">Browse</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="download.html">Download</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+					<li><a href="index.php">PHP Index</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<h1>Welcome to LUCApedia</h1>
+    
+    <p>LUCApedia is a unified framework containing multiple datasets related
+	   to the Last Universal Common Ancestor (LUCA) and its predecessors. The 
+	   database can be searched by protein name or Uniprot ID. Text and MySQL 
+	   datafiles are also available on the download page.</p>
+    
+	<div class="container">
+    	<div class="row">
+    		<div class="span12 center">
+      			<form name="form" class="form-search" id="form"> 
+      				<p><h4>Please enter a protein name or a Uniprot ID (also called "entry name"):</h4></p>
+			        	<input type="text" class="input-medium search-query" name="name" id="query" />
+        				<input type="button" class="btn btn-primary" value="Search" data-loading-text="Searching..." name="search_button" id="srch_btn" onClick="window.page_number=0;get();" />
+        			</p>
+        			<p>
+        				<div class="btn-group" data-toggle="buttons-radio">
+	  						<input type="button" class="btn" value="exact protein name" id="protein_name" />
+	  						<input type="button" class="btn" value="partial protein name" id="partial_protein_name"/>
+  							<input type="button" class="btn" value="Uniprot ID" id="uniprot_id" />
+  						</div>
+  					</p>
+	      		</form>
+    	 	</div>
+    	</div>
+		<div id="output">
+		<div class="well">
+			Search hints
+				<ol>
+				<li> For a given protein, use the general name for the protein family (e.g. “Glutaminyl-tRNA synthetase”) rather than a specific locus tag name for (e.g. “NCER_100619”).</li>
+				<li> Try using the partial protein name search option rather than the exact protein name search option.</li>
+				<li> Try using the LUCApedia <a href="browse.html">browse</a> page. </li>
+				<li> Look for synonyms of your protein name in <a href="http://www.uniprot.org/">Uniprot</a> and other databases such as <a href="http://www.ncbi.nlm.nih.gov/sites/gquery">Entrez</a>, <a href="http://www.genome.jp/kegg/">KEGG</a>, and <a href="http://biocyc.org/">BioCyc</a>.</li>
+				<li> Still can’t find your protein, read our <a href="downloads/lucapedia_search_tutorial.pdf">search tutorial</a>.</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+	<div class="alert alert-info">
+		<button type="button" class="close" data-dismiss="alert">&times;</button>
+		If you use LUCApedia, please cite... <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3531223/">Goldman AD, Bernhard TM, Dolzhenko E, Landweber LF (2013) LUCApedia: a database for the study of ancient life. Nucleic Acids Res., 41:D1079-82.</a>
+	</div>
+</div>
+
+</body></html>

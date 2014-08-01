@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>LUCApedia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="bootstrap/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="bootstrap/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="bootstrap/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="bootstrap/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="bootstrap/ico/apple-touch-icon-57-precomposed.png">
+    
+    <script src="./bootstrap/js/jquery.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			<a class="brand" href="index.html">LUCApedia</a>
+			<div class="nav-collapse">
+				<ul class="nav">
+					<li><a href="index.html">Search</a></li>
+					<li><a href="browse.html">Browse</a></li>
+					<li class="active"><a href="about.html">About</a></li>
+					<li><a href="download.html">Download</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+    
+    <h3> Why use LUCApedia </h3>
+    
+    <p> Thanks to the growth of genomics, proteomics, and metabolomics, it is possible to investigate properties of the Last Universal Common Ancestor (LUCA) and its predecessors in detail. LUCApedia was established to aggregate and unify the results of studies aimed at describing early life through a variety of bioinformatics approaches and pair them with a number of enzymological characteristics predicted in previous studies to reflect catalysts important in the early evolution of life. Users may query the webserver for individual proteins to rapidly identify evidence of deep ancestry. Advanced users may download the database as a series of flat files and use it to discover trends in early enzymatic and metabolic evolution and to test hypotheses related to early life. </p>
+
+	<h3> What is in LUCApedia </h3>
+	
+	<h4> Underlying database framework </h4>
+	
+	<p> Datasets corresponding to studies predicting characteristics of the Last Universal Common Ancestor (LUCA) consist of different data types: Protein structures, protein domain folds, clusters of orthologous genes, etc. In order to use these data in concert, they must be organized into a common framework. We achieve this unification by mapping these datasets to Uniprot IDs<sup>1</sup> (also called “entry names”), KEGG IDs<sup>2</sup>, and Biocyc IDs<sup>3</sup>. These three implementations are separate and it is up to the user whether to choose one for his or her study or to compare the results of all three to achieve a greater level of confidence in his or her study. Methods of mapping each of these datasets into Uniprot, KEGG, and Biocyc IDs are described in Section V. </p>
+    
+    <h4> Early life datasets </h4>
+    
+    <p> <em>Dataset of ribozyme functions — 32 EC codes </em> <br>
+	The RNA world hypothesis predicts that the original genetic system involved RNA genes encoding RNA enzymes (also called ribozymes)<sup>4</sup>. This dataset represents enzymatic functions (by Enzyme Commission<sup>5</sup> code) that have been observed <em>in vivo</em> or synthesized <em>in vitro</em>. </p>
+	
+	<p> <em>Dataset from Harris et al., 2003<sup>6</sup> — 80 COGs</em> <br> 
+	This study attempted to identify the minimal gene set of LUCA by identifying Clusters of Orthologous Groups of genes<sup>7</sup> (COGs) that were present in every genome available at the time. </p>
+	
+	<p> <em>Dataset from Mirkin et al., 2003<sup>8</sup> — 571 COGs</em> <br>
+	This study attempted to use a less stringent requirement for the gene set of LUCA by adding COGs, which appear to be ancient, but do not appear in every genome because they have been replaced by functional analogs through the process of non-orthologous gene displacement. LUCApedia 1.0 uses data from this study corresponding to a gain penalty of 1.0.
+	</p>
+	
+	<p> <em>Dataset from Delaye et al., 2005<sup>9</sup> — 115 Pfam motifs</em> <br> 
+	This study attempted to model the functional repertoire of LUCA through all-against-all BLAST<sup>10</sup> searches of twenty taxonomically diverse organisms. The results are a series of Pfam<sup>11</sup> motifs that are predicted to have been present in LUCA’s proteome.
+	</p>
+	
+	<p> <em>Dataset from Yang et al., 2005<sup>12</sup> — 66 SCOP superfamilies</em> <br>
+	This study attempted to identify the minimal proteome of LUCA by creating a phylogeny of 174 taxonomically diverse organisms using a quantitative classification system based on protein domain content. This method identified universal domains, defined at the level of SCOP<sup>13</sup> superfamilies.
+	</p>
+
+	<p> <em>Dataset from Wang et al., 2007<sup>14</sup> — 165 SCOP folds</em> <br>
+	This study attempted to identify the minimal proteome of LUCA by creating a phylogeny of 185 taxonomically diverse organisms using a quantitative classification system based on genomic surveys of protein domain content. A branch of this phylogeny was identified as the point at which LUCA diverged into the three domains of life. All terminal nodes deeper than this branch are considered to represent domains present in LUCA.
+	</p>
+	
+	<p> <em>Dataset from Srinivasan and Morowitz, 2009<sup>15</sup> — 286 EC codes</em> <br>
+	This study attempted to identify the set of metabolic reactions present in LUCA. Complete metabolomes of five autotrophic bacteria and one autotrophic archaean were compared and reactant-product pairs present in all six organismal datasets were predicted to have been present in LUCA.
+	</p>
+	
+	<p> <em>Nucleotide cofactor usage</em> <br>
+	Enzyme functions that employ nucleotide-derived cofactors are predicted to reflect a prior state in which the same reaction was catalyzed by ribozymes<sup>16</sup>. Cofactors derived from nucleotides were identified through literature review from the complete pool of cofactors used in Uniprot annotations.
+	</p>
+	
+	<p> <em>Amino acid cofactor usage</em> <br>
+	Enzyme functions that employ amino acid-derived cofactors are predicted to reflect the transition from ribozymes to protein enzymes as the primary catalytic molecule of life<sup>16</sup>. Cofactors derived from amino acid were identified through literature review from the complete pool of cofactors used in Uniprot annotations.
+	</p>
+	
+	<p> <em>Iron-sulfur cofactor usage</em> <br>
+	Enzyme functions that employ iron-sulfur cofactors are predicted to reflect protobiological chemistry taking place on the surface of pyrite minerals<sup>17</sup>. Iron-sulfur cofactors were identified through literature review from the complete pool of cofactors used in Uniprot annotations.
+	</p>
+	
+	<p> <em>Zinc cofactor usage</em> <br>
+	Enzyme functions that employ zinc cofactors are predicted to reflect protobiological chemistry catalyzed by zinc ions<sup>18</sup>. Zinc cofactors were identified through literature review from the complete pool of cofactors used in Uniprot annotations.
+	</p>
+	
+	<b> For more information please consult our complete documentation available on the download page. </b>
+	
+	<p><h3> References </h3></p>
+	
+	<ol>
+		<li> The UniProt Consortium (2012) Reorganizing the protein space at the Universal Protein 
+			 Resource (UniProt) Nucleic Acids Res. 40: D71-D75 </li>
+		<li> Kanehisa M, Goto S (2000) KEGG: Kyoto Encyclopedia of Genes and Genomes. Nucleic 
+			 Acids Res, 28:27-30 </li>
+		<li> Caspi R, Altman T, Dale JM, Dreher K, Fulcher CA, Gilham F, Kaipa P, Karthikeyan AS, 
+			 Kothari A, Krummenacker M, Latendresse M, Mueller LA, Paley S, Popescu L, Pujar A, 
+			 Shearer AG, Zhang P, Karp PD (2010) The MetaCyc database of metabolic pathways and 
+			 enzymes and the BioCyc collection of pathway/genome databases. Nucleic Acids Res, 
+			 38:D473-D479 </li>
+		<li> Gilbert W (1986) The RNA world. Nature, 319:618 </li>
+		<li> Webb, Edwin C. (1992). Enzyme nomenclature 1992: recommendations of the Nomenclature 
+			 Committee of the International Union of Biochemistry and Molecular Biology on the 
+			 nomenclature and classification of enzymes. San Diego: Published for the International 
+			 Union of Biochemistry and Molecular Biology by Academic Press </li>
+		<li> Harris JK, Kelley ST, Spiegelman GB, Pace NR (2003) The genetic core of the universal 
+			 ancestor. Genome Res 13:407 </li>
+		<li> Tatusov RL, Koonin EV, Lipman DJ (1997) A genomic perspective on protein families. 
+			 Science, 278:631-637 </li>
+		<li> Mirkin BG, Fenner TI, Galperin MY, Koonin EV (2003) Algorithms for computing 
+			 parsimonious evolutionary scenarios for genome evolution, the last universal common 
+			 ancestor and dominance of horizontal gene transfer in the evolution of prokaryotes. BMC 
+			 Evol Biol 3:2 </li>
+		<li> Delaye L, Becerra A, Lazcano A (2005) The last common ancestor: what's in a name? Orig 
+			 Life Evol Biosph, 35:537-554 </li>
+		<li> Altschul SF, Gish W, Miller W, Myers EW, Lipman DJ (1990) Basic local alignment search 
+			 tool. J Mol Biol, 215:403-410 </li>
+		<li> Bateman A, Coin L, Durbin R, Finn RD, Hollich V, Griffiths-Jones S, Khanna A, Marshall 
+			 M, Moxon S, Sonnhammer EL, Studholme DJ, Yeats C, Eddy SR (2004) The Pfam 
+			 protein families database. Nucleic Acids Res, 32:D138-D141 </li>
+		<li> Yang S, Doolittle RF, Bourne PE (2005) Phylogeny determined by protein domain content, 
+			 Proc Nat Acad Sci U S A, 102:373-378 </li>
+		<li> Murzin AG, Brenner SE, Hubbard T, Chothia C (1995) SCOP: a structural classification of 
+			 proteins database for the investigation of sequences and structures. J Mol Biol, 
+			 247:536-540 </li>
+		<li> Wang M, Yafremava LS, Caetano-Anollés D, Mittenthal JE, Caetano-Anollés G (2007) 
+			 Reductive evolution of architectural repertoires in proteomes and the birth of the tripartite 
+			 world. Genome Res, 17:1572-1585 </li>
+		<li> Srinvasan V and Morowitz HJ (2009) The canonical network of autotrophic intermediary 
+			 metabolism: minimal metabolome of a reductive chemoautotroph. Biol Bull 216:126-130 </li>
+		<li> Szathmáry E, Smith JM (1995) The major evolutionary transitions. Nature 374:227-232 </li>
+		<li> Wächtershäuser  G (1990) Evolution of the first metabolic cycles. Proc Nat
+			 Acad Sci U S A, 87:200-204 </li>
+		<li>  Mulkidjanian AY, Galperin MY (2009) On the origin of life in the Zinc world. 2. Validation of 
+			  the hypothesis on the photosynthesizing zinc sulfide edifices as cradles of life on Earth. BMC 
+			  Biol Direct, 4:27 </li>
+	</ol>
+	<div class="alert alert-info">
+		<button type="button" class="close" data-dismiss="alert">&times;</button>
+		If you use LUCApedia, please cite... <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3531223/">Goldman AD, Bernhard TM, Dolzhenko E, Landweber LF (2013) LUCApedia: a database for the study of ancient life. Nucleic Acids Res., 41:D1079-82.</a>
+	</div>
+</div>
+    
+</body></html>l>
